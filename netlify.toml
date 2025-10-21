@@ -1,0 +1,19 @@
+# Netlify configuration file
+
+[build]
+  # This command is run to build the site.
+  # Make sure this matches the build script in your package.json (e.g., "npm run build").
+  command = "npm run build"
+
+  # This is the directory that contains the built site.
+  # For Create React App, this is typically "build". For Vite, it's "dist".
+  # Please verify this in your project setup.
+  publish = "build"
+
+[[redirects]]
+  # This rule is for single-page applications (SPAs) with client-side routing.
+  # It ensures that any request that doesn't match a file is sent to index.html,
+  # allowing React Router to handle the navigation.
+  from = "/*"
+  to = "/index.html"
+  status = 200
