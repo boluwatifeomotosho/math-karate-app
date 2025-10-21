@@ -104,7 +104,7 @@ function GameScreen({
       }, 1000);
     }
     return () => clearInterval(interval);
-  }, [gameState, timeRemaining]);
+  }, [gameState, timeRemaining, results]);
 
   const startGame = () => {
     if (levelProblems.length === 0) {

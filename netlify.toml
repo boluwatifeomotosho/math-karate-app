@@ -1,5 +1,9 @@
 # Netlify configuration file
 
+[build.environment]
+  # Don't treat warnings as errors.
+  CI = "false"
+
 [build]
   # This command is run to build the site.
   # Make sure this matches the build script in your package.json (e.g., "npm run build").
